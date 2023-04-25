@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Distressed&family=Russo+One&display=swap');
+
+::-webkit-scrollbar {
+    width: 0.5rem
+}
+::-webkit-scrollbar-track {
+    background-color: rgba(29, 28, 29, 0.6);
+}
+
+/*Header*/
+
+html, body {
+    padding: 0%;
+    margin: 0%;
+    overflow-y: scoll; /* Hide vertical scrollbar */
+}
+
+header {
+    position: fixed;
+    height: calc((5vw + 5vh)/2);
+    background-color: rgba(29, 28, 29, 0.6);
+    font-family: 'Rubik Distressed', cursive;
+    /*font-family: 'Russo One', sans-serif;*/
+    
+    z-index: 1; /*set-on-top*/
+    width: 100%;
+    min-height: 62px;
+    
+}
+
+header .headerTitle {
+    color:rgb(141, 107, 26);
+    max-width: 100%;
+    text-align: center;
+    font-size: calc((4.1vw + 4.1vh)/2);
+    margin: auto;
+    overflow-wrap: normal;
+    letter-spacing: .2rem;
+    padding-top: 0.2rem;
+}
+
+
+/*gray box with Jano.. try to fit the screen*/
+.frontPageJano {
+    max-width: 100%;
+    background-color: rgb(59, 56, 56);
+    height: max(83vh, 37rem);
+    padding-top: max(16vh, 64px);
+    padding-bottom: 0;
+}
+
+
+.frontPageJano img {
+    display: block;
+    height: 35rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    bottom: 0;
+}
+
+footer {
+    height: 2rem;
+    background-color: rgb(141, 107, 26);
+    width: 100%;
+    padding: 0%;
+    margin: 0%;
+    position: fixed;
+    bottom: 0px; /*have to specify this if it's not at the very top*/
+    z-index: 1;
+}
+
+footer .movingFooter {
+    font-family: 'Russo One', sans-serif;
+    font-size: 1rem;
+    width: 100%;
+    padding: 0%;
+    margin: auto;
+    text-align: center;
+    
+}
+
+footer .movingFooter .footerLink {
+    display: inline-block;
+    padding: 0.2rem 8vw;
+    margin: 0 auto;
+}
+
+footer .movingFooter a {color:rgb(59, 56, 56)}
+footer .movingFooter a:link {text-decoration: none;}
+footer .movingFooter a:hover {/*font-size: 120%;*/ color:rgba(29, 28, 29)}
