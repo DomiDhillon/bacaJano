@@ -1,2 +1,0 @@
-# bacaJano
-website project
