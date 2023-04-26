@@ -1,7 +1,7 @@
 <h1 align="center">BAČA JANO</h1>
 
 
-&rarr check here:
+&rarr; check here:
 http://htmlpreview.github.io/?https://github.com/DomiDhillon/bacaJano/blob/main/bacajano_index.html
 
 <p  align ="center">
