@@ -200,7 +200,7 @@ footer .movingFooter a {color:rgb(59, 56, 56)}
 footer .movingFooter a:link {text-decoration: none;}
 footer .movingFooter a:hover {/*font-size: 120%;*/ color:rgba(29, 28, 29)}
 
-@media (max-width: 800px) {
+@media screen and (max-width: 400px) {
     header {
       height: 6rem;
     }
