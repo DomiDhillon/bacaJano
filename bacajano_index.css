@@ -199,3 +199,29 @@ footer .movingFooter .footerLink {
 footer .movingFooter a {color:rgb(59, 56, 56)}
 footer .movingFooter a:link {text-decoration: none;}
 footer .movingFooter a:hover {/*font-size: 120%;*/ color:rgba(29, 28, 29)}
+
+@media (max-width: 400px) {
+    header {
+      height: 6rem;
+    }
+    
+    .frontPageJano img {
+        height: 70rem;
+    }
+
+    .warning {
+        width: 300px;
+        height: 340px;
+    }
+
+    footer {
+        height: 4rem;
+        
+    }
+    
+    footer .movingFooter {
+        font-size: 2rem;
+        padding-top: 0.4rem;
+        letter-spacing: .2rem;
+    }
+  }
