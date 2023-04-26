@@ -154,13 +154,14 @@ h2 {
     /* display: inline-block; */
     padding: 0;
     padding-bottom: 5rem;
-    margin-top: -5vh;
+    margin-top: -4vh;
 }
 
 .illustration img {
-    width: 100%;
-    height: calc((5vw + 100vh)/2);
-    min-height: 100px;
+    /* width: 100%; */
+    /* height: calc((5vw + 100vh)/2); */
+    height: 20rem;
+    /* min-height: 100px; */
     /* padding-top: 2rem; */
     margin: 0;
 }
