@@ -19,9 +19,9 @@
     box-sizing: border-box;
 }
 
-/* body {
+body {
     background-color: var(--color-white);
-} */
+}
 
 header {
     background-color: var(--color-black);
@@ -83,6 +83,7 @@ nav ul li a {
 
 nav ul li a:hover {
     color: var(--color-white);
+    font-weight: 700;
 }
 
 .portraitBox {
@@ -130,6 +131,7 @@ here a link that might help: http://peter.sh/experiments/vendor-prefixed-css-pro
     top: 0px;
     background-color: var(--color-black);
     z-index: 3;
+    margin-top: -2%;
 }
 
 .menuButton {
@@ -164,18 +166,18 @@ here a link that might help: http://peter.sh/experiments/vendor-prefixed-css-pro
 }
 
 .border_across {
-    height: 40px;
+    height: 80px;
     width: 100%;
     background-color: var(--color-gold);
     position: static;
 }
 
-.border_left {
+/* .border_left {
     height: 40px;
     width: 15%;
     background-color: var(--color-gold);
     display: inline-flex;
-    position: absolute;
+    
 }
 
 .border_right {
@@ -183,22 +185,29 @@ here a link that might help: http://peter.sh/experiments/vendor-prefixed-css-pro
     width: 15%;
     background-color: var(--color-gold);
     display: inline-flex;
-    position: absolute;
-    right: 0;
-}
+    
+    margin-left: 40%;
+} */
 
 .text {
     width: 70%;
-    height: auto;
+    height: fit-content;
     background-color: var(--color-yellowish);
     padding: 5rem;
     padding-right: 3rem;
     margin: 0 auto;
+    margin-top: -45px;
     left: 15%;
     /* display: inline-flex; */
-    position: absolute;
+    /* position: absolute; */
     box-shadow: -2px 4px 6px rgba(0, 0, 0, 0.5), 2px 4px 6px rgba(0, 0, 0, 0.5);
 }
+
+.text:after {       /* CLEARFIX */
+    content: "";
+    display: table;
+    clear: both;
+    }
 
 h2 {
     font-family: 'Segoe UI', sans-serif;
