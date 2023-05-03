@@ -1,0 +1,279 @@
+/*fonts we need*/
+/* Segoe UI & Calibi */
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Birthstone&family=Caveat:wght@700&family=Chilanka&family=Comforter+Brush&family=Dancing+Script&family=Edu+VIC+WA+NT+Beginner:wght@700&family=Yomogi&display=swap');
+
+/* :-moz-placeholder */
+/* ::-webkit-scrollbar */
+
+:root{
+    --color-black:rgb(20,20,20);
+    --color-gold:rgb(223,171,49);
+    --color-yellowish:rgb(255,242,204);
+    --color-white:rgb(255, 251, 239);
+    --color-gray: rgb(59, 56, 56);
+}
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-white);
+}
+
+header {
+    background-color: var(--color-black);
+    width: 100%;
+    height: max(52vh, 390px);
+    position: static;
+}
+
+main {
+    width: 100%;
+    background-color: var(--color-white);
+    position: static;
+}
+
+h1 {
+    position: absolute;
+    max-width: fit-content;
+    bottom: 0;
+    margin: auto;
+    margin-left: 10px;
+    margin-bottom: 0;
+    display: inline-flexbox;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* font-family: 'Dancing Script'; */
+    font-size: 35px;
+    font-weight: 1000;
+    /* text-transform: lowercase; */
+    color: var(--color-gold);
+    /* background-color:blueviolet; */
+}
+
+nav {
+    display: none; /* display(ed) when clicked on as per fun in jquery un script */
+    position: absolute;
+    width: fit-content;
+    right: 0;
+    top: 50px;
+}
+
+nav ul {
+    width: 300px;
+    height: auto;
+    position: relative;
+    background-color: var(--color-black);
+    list-style: none;
+    display: flexbox;
+    padding-left: 30px;
+    padding-bottom: 20px;
+}
+
+nav ul li {
+    padding-top: 20px;
+
+}
+
+nav ul li a {
+    color: var(--color-gold);
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Segoe UI', Verdana, sans-serif;
+    font-weight: 600;
+    transition-duration: 0.2s;
+}
+
+nav ul li a:hover {
+    color: var(--color-white);
+    font-weight: 700;
+}
+
+.portraitBox {
+    width: 250px;
+    height: 260px;
+    background-color: rgb(253,253,253);
+    border-radius: 50%;
+    border-style: solid;
+    border-color: var(--color-gold);
+    border-width: 10px;
+    box-shadow: 0 40px 60px 30px rgba(255,242,204,0.4);
+    overflow: hidden;
+    margin: auto;
+    /* margin-bottom: 40px; */
+    z-index: 5;
+    position: relative;
+    -ms-transform: translateY(25%);
+    -moz-transform: translateY(25%);
+    -webkit-transform: translateY(25%);
+    -o-transform: translateY(25%);
+    transform: translateY(15%);
+    /* 
+
+well -webkit- is for Chrome and safari where as -ms is for Internet Explorer
+
+there are also other prefixes like -moz- for Firefox and -o- for Opera
+
+here a link that might help: http://peter.sh/experiments/vendor-prefixed-css-property-overview/
+ */
+}
+
+.portraitBox img {
+    width: 380px;
+    height: 240px;
+    bottom: 0;
+    transform: translateX(-17%);
+    /* transform: translateY(2%); */
+    position: absolute;
+}
+
+
+.stickyHeader {
+    height: 50px;
+    width: 100%;
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: sticky;
+    top: 0px;
+    background-color: var(--color-black);
+    /* background: linear-gradient(rgba(20,20,20) 80%, var(--color-gold)); */
+    background-blend-mode: darken;
+    z-index: 3;
+    margin-top: -4%;
+    transition: 0.5s ease-in-out;
+}
+
+.menuButton {
+    position: absolute;
+    height: 32px;
+    width: 40px;
+    bottom: 7px;
+    right: 0;
+    margin-right: 10px;
+    display: inline-flexbox;
+    background-color: var(--color-black);
+    border-radius: 10%;
+}
+
+.menuButton:hover{
+    box-shadow: 0 2px 2px rgba(223,171,49, 0.5),
+     0 -2px 2px rgba(223,171,49, 0.5),
+     2px 0 2px rgba(223,171,49, 0.5),
+     -2px 0 2px rgba(223,171,49, 0.5);
+     transition: all 0.2s;
+     cursor: pointer;
+}
+
+.menuButton .brick {
+    display: flex;
+    width: 33px;
+    height: 4px;
+    margin: auto;
+    margin-top: 5px;
+    background-color: var(--color-gold);
+    border-radius: 15%;
+    padding:2px;
+}
+
+.border_across {
+    height: 80px;
+    width: 100%;
+    background-color: var(--color-gold);
+    position: static;
+}
+
+/* .border_left {
+    height: 40px;
+    width: 15%;
+    background-color: var(--color-gold);
+    display: inline-flex;
+    
+}
+
+.border_right {
+    height: 40px;
+    width: 15%;
+    background-color: var(--color-gold);
+    display: inline-flex;
+    
+    margin-left: 40%;
+} */
+
+.text {
+    width: 70%;
+    height: fit-content;
+    background-color: var(--color-yellowish);
+    padding: 5rem;
+    padding-right: 3rem;
+    margin: 0 auto;
+    margin-top: -35px;
+    left: 15%;
+    /* display: inline-flex; */
+    /* position: absolute; */
+    box-shadow: -2px 4px 6px rgba(0, 0, 0, 0.5), 2px 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.text:after {       /* CLEARFIX */
+    content: "";
+    display: table;
+    clear: both;
+    }
+
+h2 {
+    /* font-family: 'Segoe UI', sans-serif; */
+    font-family: 'Caveat';
+    font-size: xx-large;
+    font-weight: 700;
+    color: var(--color-gray);
+    padding-bottom: 5%;
+}
+
+p {
+    color:rgba(29, 28, 28);
+    font-family: Calibri, sans-serif;
+    font-size: 4 rem;
+    /* display: block;
+    position: absolute; */
+
+}
+
+/* .illustration {
+    float: right;
+    
+} */
+
+.text img {
+    height: min(500px, 60vh);
+    margin: 0 auto;
+    float: right;
+    margin-top: -8vh;
+}
+
+footer {
+    height: 100px;
+    margin-top: 10px;
+    background-color: var(--color-white);
+}
+
+.arrows {
+    width: fit-content;
+    /* background-color: red; */
+    margin: auto;
+    margin-top: 30px;
+    position: relative;
+}
+
+.arrows a {
+    color: var(--color-gray);
+    font-size: 30px;
+    position: relative;
+    display: inline-box;
+    margin: auto;
+    padding: 0 30px;
+}
+
+.arrows a:hover {
+    color: var(--color-gold);
+}
