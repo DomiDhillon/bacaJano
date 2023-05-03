@@ -1,22 +1,20 @@
-let n = 0;
+let state = 'closed';
 
 $(document).ready(function(){ //This is to prevent any jQuery code from running before the document is finished loading (is ready).
     $(".menuButton").click(function(){
-        if (n%2==0) {
+        if (state=='closed') {
             $("nav").show();
-            n= n+1;
+            state = 'open';
         } else{
             $("nav").hide();
-            n= n+1;
+            state = 'closed';
         }
     });
 });
 
-// $(document).ready(function(){ //close nav by clicking anywhere
-//     $("body").click(function(){
-//         if (n%2==1) {
-//             $("nav").hide();
-//             n= n+1;
-//         }
-//     });
-// });
+document.onclick = function(e){
+    if(e.target.id !== 'navigation' && e.target.id !== 'menu2hide' && e.target.className !== 'brick'){
+        $('nav').hide();
+        state = 'closed';
+    }
+};
