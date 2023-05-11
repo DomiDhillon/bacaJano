@@ -1,0 +1,463 @@
+/*fonts we need*/
+/* Segoe UI & Calibi & Caveat*/
+
+/* :-moz-placeholder */
+/* ::-webkit-scrollbar */
+
+:root{
+    --color-black:rgb(20,20,20);
+    /* --color-gold:rgb(250, 201, 53);  */
+    --color-gold:rgb(255,242,204);
+    --color-yellowish:rgb(255,242,204);
+    --color-white:rgb(255, 251, 239);
+    --color-gray: rgb(59, 56, 56);
+    /* --children: [2, 5, 10, 13, 18, 22, 25, 30, 33]; */
+}
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-white);
+}
+
+main {
+    width: 100%;
+    background-color: var(--color-white);
+    position: static;
+}
+
+h1 {
+    position: absolute;
+    max-width: fit-content;
+    bottom: 0;
+    margin: auto;
+    margin-left: 10px;
+    margin-bottom: 0;
+    display: inline-flexbox;
+    font-family: 'Segoe UI', Verdana, sans-serif;
+    font-size: 35px;
+    font-weight: 1000;
+    color: var(--color-gold);
+}
+
+nav {
+    display: none; /* display(ed) when clicked on as per fun in jquery un script */
+    position: absolute;
+    width: fit-content;
+    right: 0;
+    top: 50px;
+}
+
+nav ul {
+    width: 300px;
+    height: auto;
+    position: relative;
+    /* background-color: var(--color-gray); */
+    background: linear-gradient(
+    180deg,
+    var(--color-black),
+    var(--color-gray) 80%
+  );
+    list-style: none;
+    display: flexbox;
+    padding: 30px;
+    padding-right: 0;
+}
+
+nav ul li {
+    padding-top: 20px;
+}
+
+nav ul li a {
+    color: var(--color-gold);
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Segoe UI', Verdana, sans-serif;
+    font-weight: 600;
+    transition-duration: 0.1s;
+}
+
+nav ul li a:hover {
+    color: var(--color-white);
+    font-weight: 700;
+}
+
+nav ul li .contact {
+    width: fit-content;
+    color: var(--color-gold);
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Segoe UI', Verdana, sans-serif;
+    font-weight: 600;
+    /* transition-duration: 0.2s; */
+}
+
+#contactButton:hover {
+    color: var(--color-white);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+#contactEmail {
+    display: none;
+    font-weight: 400;
+    font-size: 18px;
+    position: relative;
+    background-color: var(--color-gray);
+}
+
+#contactEmail:hover {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+    /* 
+
+well -webkit- is for Chrome and safari where as -ms is for Internet Explorer
+
+there are also other prefixes like -moz- for Firefox and -o- for Opera
+
+here a link that might help: http://peter.sh/experiments/vendor-prefixed-css-property-overview/
+ */
+
+.stickyHeader {
+    height: 60px;
+    width: 100%;
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: sticky;
+    top: 0px;
+    background-color: var(--color-black);
+    background-blend-mode: darken;
+    z-index: 5;
+    transition: 0.5s ease-in-out;
+}
+
+.menuButton {
+    position: absolute;
+    height: 32px;
+    width: 40px;
+    bottom: 7px;
+    right: 0;
+    margin-right: 10px;
+    display: inline-flexbox;
+    background-color: var(--color-black);
+    border-radius: 10%;
+    z-index: 11;
+}
+
+.menuButton:hover{
+    box-shadow: 0 2px 3px rgba(255,242,204, 0.5),
+     0 -2px 3px rgba(255,242,204, 0.5),
+     2px 0 3px rgba(255,242,204, 0.5),
+     -2px 0 3px rgba(255,242,204, 0.5);
+     transition: all 0.2s;
+     cursor: pointer;
+}
+
+.menuButton .brick {
+    display: flex;
+    width: 33px;
+    height: 4px;
+    margin: auto;
+    margin-top: 5px;
+    background-color: var(--color-gold);
+    border-radius: 20%;
+    padding:2px;
+}
+
+.border_across {
+    height: 60px;
+    width: 100%;
+    background: repeating-linear-gradient(
+    -60deg,
+    var(--color-black),
+    var(--color-black) 10px,
+    var(--color-gray) 10px,
+    var(--color-gray) 20px
+  );
+    position: static;
+}
+
+.text {
+    width: 70%;
+    height: fit-content;
+    background-color: var(--color-yellowish);
+    padding: 5rem;
+    padding-right: 3rem;
+    margin: 0 auto;
+    margin-top: -35px;
+    left: 15%;
+    box-shadow: -2px 4px 6px rgba(0, 0, 0, 0.5), 2px 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.text:after {       /* CLEARFIX */
+    content: "";
+    display: table;
+    clear: both;
+    }
+
+h2 {
+    font-family: 'Segoe UI', Verdana, sans-serif;
+    font-size: xx-large;
+    font-weight: 700;
+    color: var(--color-gray);
+    padding-bottom: 5%;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+p {
+    color:rgba(29, 28, 28);
+    font-family: Calibri, sans-serif;
+    font-size: 18px;
+    padding: 20px;
+}
+
+.text .textImg_left {
+    height: min(600px, 70vh);
+    padding-right: 15%;
+    float: left;
+    opacity: 0.8;
+    margin-top: 30px;
+}
+
+.text .textImg_right {
+    height: min(600px, 70vh);
+    padding-left: 15%;
+    float: right;
+    opacity: 0.8;
+    margin-top: 30px;
+}
+
+/* -------------------chcem knihu----------------------------------------- */
+.formulaire {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    margin: auto;
+    /* margin-left: 10%; */
+    overflow-x: hidden;
+    overflow-y: hidden;
+    /* overscroll-behavior: show; */
+    position: relative;
+    justify-content: center;
+}
+
+/* .formulaire::before {
+    content: "";
+    background: url(../pictures/dog_only_shadow.png);
+    background-blend-mode:overlay;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    background-size: min(50vw,80%);
+    position:absolute;
+    top: 15vh;
+    right: 0px;
+    bottom: 0px;
+    left: 0vw;
+} */
+
+.dog {
+    /* position:sticky; */
+    /* bottom: 0; */
+    margin-top: 20px;
+    margin-right: -50px;
+    margin-bottom: 0;
+    /* opacity: 50%; */
+    height: fit-content;
+    box-shadow: inset 0 0px 10px 10px var(--color-yellowish);
+    overflow: hidden;
+    border-radius: 30%;
+}
+
+.dogimg {
+    width: 300px;
+    height: auto;
+}
+
+form {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: repeat(7, 80px);
+    gap: 10px;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    font-family: Calibri, 'Trebuchet MS', sans-serif;   
+    font-weight: 500; 
+    justify-items: center;
+    align-items: center;
+}
+
+.form > label {
+    color: var(--color-black);
+    position: relative;
+}
+
+input {
+    position: relative;
+    background-color: rgba(255, 251, 239);
+    opacity: 0.7;
+    font-size: 20px;
+    text-align: center;
+    font-family: Calibri, 'Trebuchet MS', sans-serif; 
+}
+
+select {
+    background-color: var(--color-white);
+    font-size: 16px;
+    text-align: center;
+    font-family: Calibri, 'Trebuchet MS', sans-serif; 
+    padding: 3px 5px;
+}
+
+button {
+    border-radius: 5%;
+    font-size: 20px;
+    text-align: center;
+    font-family: Calibri, 'Trebuchet MS', sans-serif; 
+    /* outline-width: 2px;
+    outline-color: var(--color-gray);
+    outline-style: solid; */
+    color: var(--color-black);
+    background-color: var(--color-yellowish);
+    padding: 5px 15px;
+    /* border: none; */
+}
+
+button:hover {
+    background-color: var(--color-yellowish);
+    box-shadow: 0px 0px 5px 2px var(--color-gray);
+    /* font-weight: 600; */
+    color: var(--color-gray);
+    cursor: pointer;
+    border: none;
+}
+
+
+/* ------------------------historicke okienko------------------------------------- */
+.grid_2_cols {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: repeat(2, auto);
+    gap: 10px;
+    padding: 5px;
+    font-size: 20px;
+    text-align: center;
+    font-family: Calibri, 'Trebuchet MS', sans-serif;   
+    font-weight: 500; 
+    justify-items: center;
+    align-items: center;
+}
+
+.textImg_center {
+    height: min(200px, 30vh);
+    width: auto;
+    margin: 25px auto;
+    display: block;
+    opacity: 0.8;
+}
+
+h3 {
+    color: var(--color-gray);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* ------------------------ako vznikla kniha------------------------------------- */
+.item:nth-child(even) {
+    border-left: 2px dashed;
+    border-left-color: var(--color-gray);
+    justify-self: baseline;
+    text-align: left;
+    padding-left: 20px;
+    margin-left: -6px;
+}
+
+.item:nth-child(odd) {
+    border-right: 2px dashed;
+    border-left-color: var(--color-gray);
+    justify-self:last baseline;
+    text-align: right;
+    padding-right: 20px;
+    margin-right: -6px;
+}
+
+/* let children = [2, 5, 10, 13, 18, 22, 25, 30, 33] */
+
+.item + h3 {
+/* border: 2px solid !important; */
+border-width: 0px !important;
+/* border-style: solid !important;
+border-color: var(--color-black); */
+box-shadow: 0px 0px 5px 2px var(--color-gray);
+border-radius: 10%;
+padding: 10px 20px !important;
+font-size: 20px;
+}
+
+/* .item + p {
+    background-color: var(--color-white);
+
+}
+
+.item + p:nth-child(odd) {
+    background-color: var(--color-gray);
+    color: var(--color-white);
+} ... COLOR IDEAS TO MAKE IT MORE INTERESTING */
+
+
+.empty {
+    font-size: 30px;
+}
+
+.empty i {
+    padding: 0px 10px;
+    color: var(--color-black);
+    /* background-color: var(--color-gray); */
+    /* border-radius: 50%; */
+}
+
+.empty img {
+    height: 40px;
+    padding: 0 10px;
+    filter: grayscale();
+}
+
+/* -------------------------------------footer--------------------------------------------- */
+footer {
+    height: 100px;
+    margin-top: 10px;
+    background-color: var(--color-white);
+}
+
+.arrows {
+    width: fit-content;
+    /* background-color: red; */
+    margin: auto;
+    margin-top: 30px;
+    position: relative;
+}
+
+.arrows a {
+    color: var(--color-gray);
+    font-size: 30px;
+    position: relative;
+    display: inline-box;
+    margin: auto;
+    padding: 0 30px;
+}
+
+.arrows a:hover {
+    color: var(--color-black);
+}
+
+
