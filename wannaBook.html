@@ -62,7 +62,9 @@
                             <option value=8>8</option>
                         </select>
                         <label for="username">Meno a priezvisko:</label>
-                        <input type="text" id="username" name="username"  required>
+                        <input type="text" id="username" name="username"  required=""
+                                oninvalid= "alert('Please Enter valid email');"
+                                oninput="setCustomValidity('')">
                         <label for="street">Ulica:</label>
                         <input type="text" id="street" name="street"  required>
                         <label for="city">Mesto:</label>
