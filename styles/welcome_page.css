@@ -189,7 +189,7 @@ here a link that might help: http://peter.sh/experiments/vendor-prefixed-css-pro
     width: 100%;
     background: linear-gradient(
             -90deg,
-            var(--color-black) 50%,
+            var(--color-black) 40%,
             rgba(59, 56, 56, 0)
             ),
             repeating-linear-gradient(
