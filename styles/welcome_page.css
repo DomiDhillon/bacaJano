@@ -171,7 +171,7 @@ here a link that might help: http://peter.sh/experiments/vendor-prefixed-css-pro
     padding:2px;
 }
 
-.border_across {
+/* .border_across {
     height: 60px;
     width: 100%;
     background: repeating-linear-gradient(
@@ -182,31 +182,25 @@ here a link that might help: http://peter.sh/experiments/vendor-prefixed-css-pro
     var(--color-gray) 20px
   );
     position: static;
-}
+} */
 
-/* .border_across {
+.border_across {
     height: 60px;
     width: 100%;
     background: linear-gradient(
-            90deg,
-            var(--color-black) 10%,
-            rgba(59, 56, 56, 0.1),
-            rgba(255, 251, 239, 0.3),
-            rgba(255, 251, 239, 0.4),
-            rgba(255, 251, 239, 0.3),
-            var(--color-black),
-            var(--color-black)),
-            linear-gradient(
-            180deg,
-            var(--color-black) 60%,
-            rgb(59, 56, 56),
-            rgba(59, 56, 56, 0.8),
-            rgba(59, 56, 56, 0.8),
-            rgba(59, 56, 56, 0.8),
-            var(--color-black),
-            var(--color-black));
+            -90deg,
+            var(--color-black) 50%,
+            rgba(59, 56, 56, 0)
+            ),
+            repeating-linear-gradient(
+    -60deg,
+    var(--color-black),
+    var(--color-black) 10px,
+    var(--color-gray) 10px,
+    var(--color-gray) 20px
+  );
         position: static;
-} */
+}
 
 .text {
     width: 70%;
