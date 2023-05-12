@@ -189,8 +189,8 @@ here a link that might help: http://peter.sh/experiments/vendor-prefixed-css-pro
     width: 100%;
     background: linear-gradient(
             -90deg,
-            var(--color-black) 40%,
-            rgba(59, 56, 56, 0)
+            var(--color-black) 20%,
+            rgba(0, 0, 0,0)
             ),
             repeating-linear-gradient(
     -60deg,
@@ -201,6 +201,15 @@ here a link that might help: http://peter.sh/experiments/vendor-prefixed-css-pro
   );
         position: static;
 }
+
+/* .border_across {
+    height: 60px;
+    width: 100%;
+    background: linear-gradient(
+            180deg,
+            var(--color-black) 10%,
+            rgba(0, 0, 0,0)
+            );} */
 
 .text {
     width: 70%;
@@ -476,7 +485,8 @@ font-size: 20px;
     padding: 0 !important;
     padding: 0;
     margin: 10px 10px;
-    box-shadow: 0px 0px 10px 2px var(--color-gray);
+    margin-top: 20px;
+    box-shadow: 0px 0px 10px 2px grey;
 }
 
 .guy_description h3 {
@@ -488,14 +498,22 @@ font-size: 20px;
     border-radius: 10%;
     padding: 10px 10px !important;
     font-size: 20px;
-    margin-top: 10px;
-    text-shadow: 0px 0px 15px var(--color-gray);
+    margin-top: 20px;
+    /* text-shadow: 0px 0px 3px var(--color-black); */
+    /* text-decoration: underline 1px var(--color-gray);
+    text-underline-offset: -18px;
+    text-decoration-skip-ink: auto; */
     }
 
 .guy_description p {
     padding: 10px 10px;
     margin-bottom: 10px;
 } 
+
+/* .guy_description h3 i {
+    font-size: 12px;
+    bottom: 5px;
+} */
 
 .guy_picture + .item:nth-child(even) {
     border: none;
