@@ -319,6 +319,10 @@ select {
     padding: 3px 5px;
 }
 
+select:hover {
+    cursor: pointer;
+}
+
 button {
     border-radius: 5%;
     font-size: 20px;
@@ -347,15 +351,18 @@ button:hover {
 .grid_2_cols {
     position: relative;
     display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: repeat(2, auto);
+    grid-template-columns: 50% 50%;
+    /* grid-template-rows: repeat(2, auto); */
+    grid-template-rows: auto;
+    /* grid-template-areas: repeat(18, "a b"); */
     gap: 10px;
     padding: 5px;
     font-size: 20px;
     text-align: center;
     font-family: Calibri, 'Trebuchet MS', sans-serif;   
     font-weight: 500; 
-    justify-items: center;
+    justify-items: center !important;
+    justify-content: center !important;
     align-items: center;
 }
 
@@ -375,6 +382,8 @@ h3 {
 
 /* ------------------------ako vznikla kniha------------------------------------- */
 .item:nth-child(even) {
+    /* grid-area: b; */
+    /* justify-self: center; */
     border-left: 2px dashed;
     border-left-color: var(--color-gray);
     justify-self: baseline;
@@ -384,9 +393,12 @@ h3 {
 }
 
 .item:nth-child(odd) {
+    /* grid-area: a; */
+    justify-self: end;
+    /* justify-self: center; */
     border-right: 2px dashed;
     border-left-color: var(--color-gray);
-    justify-self:last baseline;
+    /* justify-self:last baseline; */
     text-align: right;
     padding-right: 20px;
     margin-right: -6px;
