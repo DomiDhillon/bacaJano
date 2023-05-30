@@ -21,13 +21,14 @@
 }
 
 body {
-    background-color: var(--color-white);
+    background-color: var(--color-black);
 }
 
 main {
     width: 100%;
     background-color: var(--color-white);
     position: static;
+    padding-bottom: 50px;
 }
 
 h1 {
@@ -523,10 +524,48 @@ font-size: 20px;
     border: none;
 }
 
+/* --------------------------------------photogallery-------------------------------------- */
+.album {
+    box-shadow: 0px 0px 6px var(--color-gray);
+    border-radius: 10%;
+    width: min(400px, 25vw);
+    height: max(400px, fit-content);
+}
+
+.album h3{
+    padding: 5px 10px;
+    margin: 5px;
+}
+
+.album:hover {
+    background: linear-gradient(
+            -90deg,
+            var(--color-black) 20%,
+            rgba(0, 0, 0,0)
+            ),
+        repeating-linear-gradient(
+            -60deg,
+            var(--color-black),
+            var(--color-black) 10px,
+            var(--color-gray) 10px,
+            var(--color-gray) 20px
+    );
+    cursor: pointer;
+}
+
+.album:hover .photo_header {
+    color: var(--color-white) ;
+}
+
+.album:hover .textImg_center {
+    filter: invert(1);
+    opacity: 1;
+}
+
 /* -------------------------------------footer--------------------------------------------- */
 footer {
     height: 100px;
-    margin-top: 10px;
+    /* margin-top: 10px; */
     background-color: var(--color-white);
 }
 
@@ -534,7 +573,7 @@ footer {
     width: fit-content;
     /* background-color: red; */
     margin: auto;
-    margin-top: 30px;
+    /* margin-top: 30px; */
     position: relative;
 }
 
